@@ -1,0 +1,26 @@
+# Made in Blockbench 4.8.1
+newmtl m_5adac10f-5b24-cc57-b103-ee07c6baa4e7
+map_Kd mainpistolbody.png 
+newmtl m_676405e5-7546-9b43-3532-170f0d6d4992
+map_Kd bottomportion.png 
+newmtl m_a5ed9d8c-01a4-da49-c9f9-128a79b39d7f
+map_Kd trigger.png 
+newmtl m_2eb34fe0-8918-5ee2-c471-aaf0f91c3d13
+map_Kd literallytheonlycylinder.png 
+newmtl m_325dccd2-38dd-93e4-4bcd-6cab0c6db8da
+map_Kd magholder.png 
+newmtl m_ed072b57-a00f-2360-ee91-0462f2f97889
+map_Kd topslider.png 
+newmtl m_7c5a24e4-88ee-0be7-4df7-debc03e4176f
+map_Kd muzzle.png 
+newmtl m_6adc4042-2528-123c-82b9-eb870b433d37
+map_Kd frontironsight.png 
+newmtl m_73fdee88-52da-3466-a390-31050993271d
+map_Kd ironsight1.png 
+newmtl m_339d6961-dd00-89a0-fa99-d6e17b70d00a
+map_Kd ironsight2.png 
+newmtl m_458e8756-3ecd-a9c9-d022-ba80807fd58a
+map_Kd magbottom.png 
+newmtl m_12697815-b9c9-7014-48c0-7f7741c3a1b7
+map_Kd magtop.png 
+newmtl none
