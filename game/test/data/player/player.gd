@@ -40,11 +40,12 @@ var fall := Vector3()
 var direction = Vector3()
 var horizontalVelocity := 0.0
 
+
 func wall_run():
 	if w_runnable:		
-		if Input.is_action_pressed("move_jump"):	
-			if Input.is_action_pressed("move_forward") and horizontalVelocity > 2.0: 
-				if is_on_wall(): 
+		if Input.is_action_pressed("move_jump") and \
+		Input.is_action_pressed("move_forward") and \
+		horizontalVelocity > 2.0 and is_on_wall(): 
 					wall_normal = get_slide_collision(0)
 					get_tree().create_timer(0.2)
 					velocity.y = 0

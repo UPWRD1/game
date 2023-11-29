@@ -64,5 +64,3 @@ texture = ExtResource("2_nq3sk")
 mesh = SubResource("CapsuleMesh_3oyv7")
 
 [node name="Timer" type="Timer" parent="."]
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

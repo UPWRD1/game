@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvbgf6drv86br"]
+[gd_scene load_steps=12 format=3 uid="uid://dvbgf6drv86br"]
 
 [ext_resource type="PackedScene" uid="uid://cwiu8nsyij4gn" path="res://data/player/player.tscn" id="1_tnv5a"]
 [ext_resource type="Script" path="res://data/scripts/world.gd" id="1_x87ln"]
 [ext_resource type="Texture2D" uid="uid://bfmbndv1sge56" path="res://data/sky.exr" id="3_5hgqm"]
 [ext_resource type="Texture2D" uid="uid://cknnpbe7gnutf" path="res://data/prototype/Green/texture_01.png" id="3_hpn24"]
+[ext_resource type="PackedScene" uid="uid://bn1wah8qtc7fl" path="res://ui.tscn" id="3_tvasj"]
 [ext_resource type="Texture2D" uid="uid://cjmy06h4u2c4r" path="res://data/prototype/Orange/texture_01.png" id="4_x8haq"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6bxyf"]
@@ -31,6 +32,14 @@ script = ExtResource("1_x87ln")
 
 [node name="player" parent="." instance=ExtResource("1_tnv5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="UI" parent="player" instance=ExtResource("3_tvasj")]
+offset_left = -576.0
+offset_top = -320.0
+offset_right = -576.0
+offset_bottom = -320.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="environment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xj5u1")
@@ -123,3 +132,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -0.0804291)
 use_collision = true
 size = Vector3(12, 1, 14)
 material = SubResource("StandardMaterial3D_jxrtg")
+
+[connection signal="player_wall_running" from="player" to="player/UI" method="_player_wall_running"]
+[connection signal="stop_wall_running" from="player" to="player/UI" method="_player_stop_wall_running"]
