@@ -1,30 +1,30 @@
 extends CharacterBody3D
 
 
-@export var sprint_enabled = true
-@export var crouch_enabled = true
-@export var slide_enabled = true
+@export var sprint_enabled := true
+@export var crouch_enabled := true
+@export var slide_enabled := true
 
-@export var base_speed = 12
-@export var sprint_speed = 16
-@export var jump_velocity = 4
-@export var sensitivity = 0.1
-@export var accel = 10
-@export var crouch_speed = 3
-@export var slide_speed = 20
+@export var base_speed := 12
+@export var sprint_speed := 16
+@export var jump_velocity := 4
+@export var sensitivity := 0.1
+@export var accel := 10
+@export var crouch_speed := 3
+@export var slide_speed := 20
 
-var speed = base_speed
-var sprinting = false
-var sliding = false
-var crouching = false
-var wall_running = false
-var camera_fov_extents = [75.0, 85.0] #index 0 is normal, index 1 is sprinting
-var base_player_y_scale = 1.0
-var crouch_player_y_scale = 0.75
+var speed := base_speed
+var sprinting := false
+var sliding := false
+var crouching := false
+var wall_running := false
+var camera_fov_extents := [75.0, 85.0] #index 0 is normal, index 1 is sprinting
+var base_player_y_scale := 1.0
+var crouch_player_y_scale := 0.75
 var wall_normal
-var w_runnable = false
+var w_runnable := false
 
-@onready var parts = {
+@onready var parts := {
 	"head": $head,
 	"camera": $head/camera,
 	"camera_animation": $head/camera/camera_animation,
@@ -32,18 +32,19 @@ var w_runnable = false
 	"collision": $collision,
 	"timer": $Timer,
 }
-@onready var world = get_parent()
-@onready var timer = $Timer
+@onready var world := get_parent()
+@onready var timer := $Timer
 
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-var fall = Vector3()
+var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity")
+var fall := Vector3()
 var direction = Vector3()
+var horizontalVelocity := 0.0
 
 func wall_run():
 	if w_runnable:		
 		if Input.is_action_pressed("move_jump"):	
-			if Input.is_action_pressed("move_forward"):
-				if is_on_wall():
+			if Input.is_action_pressed("move_forward") and horizontalVelocity > 2.0: 
+				if is_on_wall(): 
 					wall_normal = get_slide_collision(0)
 					get_tree().create_timer(0.2)
 					velocity.y = 0
@@ -56,6 +57,8 @@ func _ready():
 	parts.camera.current = true
 
 func _process(delta):
+	horizontalVelocity = sqrt(pow(velocity.x, 2) + pow(velocity.z, 2))
+	
 	wall_run()
 	
 	if Input.is_action_pressed("move_crouch") and sprint_enabled:
