@@ -1,7 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwiu8nsyij4gn"]
+[gd_scene load_steps=12 format=3 uid="uid://cwiu8nsyij4gn"]
 
 [ext_resource type="Script" path="res://data/player/player.gd" id="1_u1w3t"]
 [ext_resource type="Texture2D" uid="uid://bubwl36108v2r" path="res://data/cursors/crosshair001.png" id="2_nq3sk"]
+[ext_resource type="Script" path="res://data/player/Walking.gd" id="3_1r6h5"]
+[ext_resource type="Script" path="res://data/player/Jumping.gd" id="5_ddg47"]
+[ext_resource type="Script" path="res://data/player/Falling.gd" id="6_4y2ic"]
 
 [sub_resource type="Animation" id="Animation_saxjg"]
 resource_name = "head_bob"
@@ -64,3 +67,14 @@ texture = ExtResource("2_nq3sk")
 mesh = SubResource("CapsuleMesh_3oyv7")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="States" type="Node" parent="."]
+
+[node name="Walking" type="Node" parent="States"]
+script = ExtResource("3_1r6h5")
+
+[node name="Jumping" type="Node" parent="States"]
+script = ExtResource("5_ddg47")
+
+[node name="Falling" type="Node" parent="States"]
+script = ExtResource("6_4y2ic")
