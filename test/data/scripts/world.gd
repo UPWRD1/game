@@ -27,14 +27,3 @@ func _process(_delta):
 			pause_game()
 		else:
 			unpause_game()
-
-
-func _on_player_significant_action():
-	pass
-	#var count = 1.0
-	#while count < 200.0:
-		#print_debug(count / 200.0)
-		#count += 1.0
-		#Engine.time_scale = count / 200
-		
-
