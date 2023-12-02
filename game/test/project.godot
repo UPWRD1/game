@@ -15,6 +15,10 @@ run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerVariables="*res://player_variables.gd"
+
 [input]
 
 game_pause={
@@ -60,4 +64,5 @@ move_crouch={
 
 [physics]
 
-3d/default_gravity=1.5
+common/physics_ticks_per_second=240
+3d/default_gravity=24.0
