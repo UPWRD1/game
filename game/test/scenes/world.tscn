@@ -49,7 +49,6 @@ albedo_texture = ExtResource("4_x8haq")
 script = ExtResource("1_x87ln")
 
 [node name="player" parent="." instance=ExtResource("1_tnv5a")]
-unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0257444, 3, 0.0146294)
 
 [node name="UI" parent="player" instance=ExtResource("3_tvasj")]
