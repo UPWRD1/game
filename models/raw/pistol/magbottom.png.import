@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://tjcec7wigy15"
+=======
+uid="uid://d2mq8k71f3vw1"
+>>>>>>> state-machine-development
 path="res://.godot/imported/magbottom.png-e7985aa0049f50393e858cfb4cb259f9.ctex"
 metadata={
 "vram_texture": false

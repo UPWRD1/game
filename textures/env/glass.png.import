@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://3cudrmddsutu"
+=======
+uid="uid://beacuhg8hqajw"
+>>>>>>> state-machine-development
 path="res://.godot/imported/glass.png-0d282906d1d7233c3a69ba37a538826c.ctex"
 metadata={
 "vram_texture": false

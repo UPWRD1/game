@@ -3,7 +3,11 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
+<<<<<<< HEAD
 uid="uid://ceyhd1jjackdr"
+=======
+uid="uid://bjxlun4e0v18"
+>>>>>>> state-machine-development
 path="res://.godot/imported/emptypistol.obj-e56183ffe5eab70693c0085c52a269aa.mesh"
 
 [deps]

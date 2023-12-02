@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://2fvcuwwcef3s"
+=======
+uid="uid://cn70etmntg0r"
+>>>>>>> state-machine-development
 path="res://.godot/imported/literallytheonlycylinder.png-1bdfd5f49804c862f1bbf6569625a9a2.ctex"
 metadata={
 "vram_texture": false

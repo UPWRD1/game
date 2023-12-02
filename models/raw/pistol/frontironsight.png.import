@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://38j3e7c528su"
+=======
+uid="uid://dcvs5ft7jms3m"
+>>>>>>> state-machine-development
 path="res://.godot/imported/frontironsight.png-c02b32e128e3771ee3ad931c2f4a4435.ctex"
 metadata={
 "vram_texture": false

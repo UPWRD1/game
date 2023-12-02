@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b721xpvflu4e2"
+=======
+uid="uid://bbnmd5k1pvaw5"
+>>>>>>> state-machine-development
 path="res://.godot/imported/ironsight1.png-549a5dc8d5f6e4dd194145fc17a95752.ctex"
 metadata={
 "vram_texture": false

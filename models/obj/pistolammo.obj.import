@@ -3,7 +3,11 @@
 importer="wavefront_obj"
 importer_version=1
 type="Mesh"
+<<<<<<< HEAD
 uid="uid://dyw82jvdt4x1u"
+=======
+uid="uid://cxy7jfeuqaioa"
+>>>>>>> state-machine-development
 path="res://.godot/imported/pistolammo.obj-f1bb866e251f11e1df0dd03151a3d89f.mesh"
 
 [deps]

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://p34rxqji7l2"
+=======
+uid="uid://dgvsfvampvewi"
+>>>>>>> state-machine-development
 path="res://.godot/imported/betterfloor1.png-5007a1feb004c782a39d64a594200eec.ctex"
 metadata={
 "vram_texture": false
