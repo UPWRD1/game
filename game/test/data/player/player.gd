@@ -4,7 +4,8 @@ extends CharacterBody3D
 var possible_states := {
 "Walking" = $States/Walking, 
 "Jumping" = $States/Jumping,
-"Falling" = $States/Falling}
+"Falling" = $States/Falling,
+"Wall Running" = $States/WallRunning}
 
 var state_history := []
 var sensitivity := 0.1

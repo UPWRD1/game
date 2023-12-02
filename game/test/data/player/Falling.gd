@@ -17,4 +17,4 @@ func physics_process_state(delta):
 	if (player.is_on_floor()):
 		player.change_state(player.possible_states["Walking"])
 	
-	player.add_velocity(gravity * gravity_direction)
+	player.add_velocity(gravity * gravity_direction * delta)

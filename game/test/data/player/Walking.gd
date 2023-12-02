@@ -1,28 +1,33 @@
 extends Node
 class_name WalkingState
 
+var player_variables
+
 var player : CharacterBody3D
 var head : Node3D
 var gravity : float
 var gravity_direction : Vector3
 
-var speed := 420
+var speed : float
 
 func _ready():
-	player = get_node("../..") as CharacterBody3D
-	head = get_node("../../head") as Node3D
-	gravity = ProjectSettings.get_setting("physics/3d/default_gravity") as float
-	gravity_direction = ProjectSettings.get_setting("physics/3d/default_gravity_vector") as Vector3
+	player_variables = get_node("/root/PlayerVariables")
+	
+	player = player_variables.player
+	head = player_variables.player.get_node("head")
+	gravity = player_variables.gravity
+	gravity_direction = player_variables.gravity_direction
+	speed = player_variables.ground_speed
 	
 func process_state(delta):
 	pass
 	
-func physics_process_state(_delta):
+func physics_process_state(delta):
 	if (not player):
 		return
 	
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
-	player.add_velocity(Vector3(input_dir.x, 0, input_dir.y).rotated(Vector3(0, 1, 0), head.rotation.y))
+	player.add_velocity(Vector3(input_dir.x, 0, input_dir.y).rotated(Vector3.UP, head.rotation.y) * speed * delta)
 	
 	if (!player.is_on_floor()):
 		player.change_state(player.possible_states["Falling"])
