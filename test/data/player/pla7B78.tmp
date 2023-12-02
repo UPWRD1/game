@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwiu8nsyij4gn"]
+[gd_scene load_steps=11 format=3 uid="uid://cwiu8nsyij4gn"]
 
 [ext_resource type="Script" path="res://data/player/player.gd" id="1_u1w3t"]
-[ext_resource type="Shader" path="res://data/player/glitch.gdshader" id="2_epput"]
 [ext_resource type="Texture2D" uid="uid://bubwl36108v2r" path="res://data/cursors/crosshair001.png" id="2_nq3sk"]
-[ext_resource type="Shader" path="res://data/player/black_and_white.gdshader" id="2_wl38x"]
+[ext_resource type="Shader" path="res://data/player/glitch.gdshader" id="3_efi68"]
 
 [sub_resource type="Animation" id="Animation_saxjg"]
 resource_name = "head_bob"
@@ -34,18 +33,12 @@ _data = {
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q8l7f"]
-resource_local_to_scene = true
-shader = ExtResource("2_epput")
-shader_parameter/shake = 0.015
+shader = ExtResource("3_efi68")
+shader_parameter/shake = 0.05
 shader_parameter/noiseQuality = 250.0
 shader_parameter/noiseIntensity = 0.001
 shader_parameter/offsetIntensity = 0.05
 shader_parameter/colorOffsetIntensity = 0.5
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_62tcw"]
-shader = ExtResource("2_wl38x")
-shader_parameter/projector_power = 0.025
-shader_parameter/vignette_param = 20.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_phygr"]
 
@@ -69,30 +62,11 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="head/camera"]
-top_level = true
 material = SubResource("ShaderMaterial_q8l7f")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -640.0
-offset_top = -360.0
-offset_right = -640.0
-offset_bottom = -360.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-
-[node name="ColorRect2" type="ColorRect" parent="head/camera"]
-material = SubResource("ShaderMaterial_62tcw")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -640.0
-offset_top = -360.0
-offset_right = -640.0
-offset_bottom = -360.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
 
 [node name="collision" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_phygr")
