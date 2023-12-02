@@ -21,7 +21,6 @@ func _ready():
 	gravity_direction = player_variables.gravity_direction
 	gravity = player_variables.gravity
 	head = player_variables.player.get_node("head")
-	jump_velocity = player_variables.jump_velocity
 	speed = player_variables.jumping_speed
 	air_resistance = player_variables.air_resistance
 	
@@ -29,14 +28,14 @@ func _ready():
 	wall_running_angle_zone = player_variables.wall_running_angle_zone
 	walL_running_speed_threshold = player_variables.wall_running_speed_threshold
 
-func process_state(delta):
+func process_state(_delta):
 	pass
 	
 func physics_process_state(delta):
-	if (player.is_on_floor()):
-		player.add_velocity(-gravity_direction * jump_velocity)
-	else:
-		player.add_velocity(gravity_direction * gravity * delta)
+	
+	
+	
+	player.add_velocity(gravity_direction * gravity * delta)
 		
 	if (player.is_on_wall_only()):
 		var wall_zone_forward_threshold = player.get_wall_normal().rotated(player.up_direction, wall_running_angle_threshold)
