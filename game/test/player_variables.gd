@@ -8,6 +8,7 @@ var player : CharacterBody3D
 # Walking variables
 var ground_speed : float = 420 #Controls horizontal movement speed on ground
 var friction : float = 0.85 #Controls ground friction
+var sprint_multiplier : float = 1.5
 
 # Jumping variables
 var jumping_speed : float = 410 #Controls horizontal movement speed while jumping

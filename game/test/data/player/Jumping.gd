@@ -46,8 +46,6 @@ func physics_process_state(delta):
 		
 		var wall_relative_speed = max(wall_zone_forward_threshold.dot(player_forward_direction * player.velocity.length()), wall_zone_backward_threshold.dot(player_forward_direction * player.velocity.length()))
 		
-		print(wall_relative_speed)
-		
 		if ((player_angle_to_wall <= wall_running_angle_zone) and \
 			 wall_relative_speed >= walL_running_speed_threshold):
 				player.change_state(player.possible_states["Wall Running"])
