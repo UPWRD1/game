@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvbgf6drv86br"]
+[gd_scene load_steps=11 format=3 uid="uid://dvbgf6drv86br"]
 
 [ext_resource type="PackedScene" uid="uid://cwiu8nsyij4gn" path="res://data/player/player.tscn" id="1_tnv5a"]
 [ext_resource type="Script" path="res://data/scripts/world.gd" id="1_x87ln"]
@@ -25,8 +25,6 @@ albedo_texture = ExtResource("3_hpn24")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i11u5"]
 albedo_texture = ExtResource("4_x8haq")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7tet"]
 
 [node name="world" type="Node3D"]
 script = ExtResource("1_x87ln")
@@ -151,9 +149,3 @@ transform = Transform3D(-0.00741756, 0.999971, -4.37102e-08, 1.38779e-17, -4.371
 use_collision = true
 size = Vector3(12, 1, 14)
 material = SubResource("StandardMaterial3D_jxrtg")
-
-[node name="CSGBox3D19" type="CSGBox3D" parent="geometry"]
-transform = Transform3D(23.63, 0, 0, 0, 1, 0, 0, 0, 23.63, 0, 0.132668, 0)
-use_collision = true
-size = Vector3(12, 1, 14)
-material = SubResource("StandardMaterial3D_b7tet")
