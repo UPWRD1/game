@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://v2plcu55b1ca"
+path="res://.godot/imported/emptypistol.obj-e56183ffe5eab70693c0085c52a269aa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/emptypistol.obj-e56183ffe5eab70693c0085c52a269aa.mesh"]
+
+source_file="res://models/obj/emptypistol.obj"
+dest_files=["res://.godot/imported/emptypistol.obj-e56183ffe5eab70693c0085c52a269aa.mesh", "res://.godot/imported/emptypistol.obj-e56183ffe5eab70693c0085c52a269aa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
